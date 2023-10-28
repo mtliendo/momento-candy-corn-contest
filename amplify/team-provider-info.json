@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-momentocandycorncont-dev-230845-authRole",
+      "UnauthRoleArn": "arn:aws:iam::842537737558:role/amplify-momentocandycorncont-dev-230845-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::842537737558:role/amplify-momentocandycorncont-dev-230845-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-momentocandycorncont-dev-230845-deployment",
+      "UnauthRoleName": "amplify-momentocandycorncont-dev-230845-unauthRole",
+      "StackName": "amplify-momentocandycorncont-dev-230845",
+      "StackId": "arn:aws:cloudformation:us-east-1:842537737558:stack/amplify-momentocandycorncont-dev-230845/b4454370-7547-11ee-941a-12082d0753f9",
+      "AmplifyAppId": "d28i7ie5vgsk52"
+    },
+    "categories": {
+      "api": {
+        "momentocandycorncont": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+type CandyCornGuess
+	@model
+	@auth(rules: [{ allow: public, operations: [create, read] }]) {
+	id: ID!
+	name: String!
+	guess: Int!
+}
