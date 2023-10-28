@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react'
 
 const WinnerPage = () => {
 	const actualCount = 859
-	const [guesses, setGuesses] = useState([])
+	const [guesses, setGuesses] = useState<any>([])
 	const winners = findClosestGuesses(actualCount, guesses)
 
 	useEffect(() => {
@@ -23,7 +23,7 @@ const WinnerPage = () => {
 					<span className="font-bold">{actualCount}</span>
 				</p>
 
-				{winners.map((winner) => (
+				{winners.map((winner: any) => (
 					<div key={winner.name} className="mb-4">
 						<h2 className="text-lg font-bold text-orange-500">{winner.name}</h2>
 						<p className="text-gray-700">Guessed: {winner.guess}</p>
@@ -34,14 +34,14 @@ const WinnerPage = () => {
 	)
 }
 
-function findClosestGuesses(actualCount, guesses) {
+function findClosestGuesses(actualCount: number, guesses: any) {
 	// Find the minimum difference between actual count and the guesses
 	const minDifference = Math.min(
-		...guesses.map((guest) => Math.abs(guest.guess - actualCount))
+		...guesses.map((guest: any) => Math.abs(guest.guess - actualCount))
 	)
 
 	// Filter the guests based on this minimum difference or those who guessed exactly right
-	const closestGuests = guesses.filter((guest) => {
+	const closestGuests = guesses.filter((guest: any) => {
 		return Math.abs(guest.guess - actualCount) === minDifference
 	})
 

@@ -9,10 +9,10 @@ import { API } from 'aws-amplify'
 import React, { useEffect, useState } from 'react'
 
 function GuessForm() {
-	const [name, setName] = useState('')
-	const [guess, setGuess] = useState('')
+	const [name, setName] = useState<any>('')
+	const [guess, setGuess] = useState<any>('')
 
-	const [guesses, setGuesses] = useState([])
+	const [guesses, setGuesses] = useState<any>([])
 
 	useEffect(() => {
 		API.graphql<GraphQLQuery<ListCandyCornGuessesQuery>>({
@@ -101,7 +101,7 @@ function GuessForm() {
 						</tr>
 					</thead>
 					<tbody>
-						{guesses.map((entry, index) => (
+						{guesses.map((entry: any, index: any) => (
 							<tr
 								key={`${entry.name}-${entry.guess}`}
 								className={index % 2 ? 'bg-gray-100' : 'bg-white'}
